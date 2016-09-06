@@ -1,0 +1,104 @@
+title,identifier,content
+"Footer Links Block",footer_links_block,"<ul class=""footer links"">
+    <li class=""nav item""><a href=""{{store url=""about-us""}}"">About us</a></li>
+    <li class=""nav item""><a href=""{{store url=""customer-service""}}"">Customer Service</a></li>
+</ul>
+"
+"Contact us info",contact-us-info,"<div class=""contact-info cms-content"">
+   <p class=""cms-content-important"">We love hearing from you, our Luma customers. Please contact us about anything at all. Your latest passion, unique health experience or request for a specific product. We’ll do everything we can to make your Luma experience unforgettable every time. Reach us however you like</p>
+   <div class=""block block-contact-info"">
+       <div class=""block-title"">
+           <strong>Contact Us Info</strong>
+       </div>
+       <div class=""block-content"">
+           <div class=""box box-phone"">
+               <strong class=""box-title"">
+                   <span>Phone</span>
+               </strong>
+               <div class=""box-content"">
+                   <span class=""contact-info-number"">1-800-403-8838</span>
+                   <p>Call the Luma Helpline for concerns, product questions, or anything else. We’re here for you 24 hours a day - 365 days a year.</p>
+               </div>
+           </div>
+           <div class=""box box-design-inquiries"">
+               <strong class=""box-title"">
+                   <span>Apparel Design Inquiries</span>
+               </strong>
+               <div class=""box-content"">
+                   <p>Are you an independent clothing designer? Feature your products on the Luma website! Please direct all inquiries via email to: <a href=""mailto:cs@luma.com"">cs@luma.com</a></p>
+               </div>
+           </div>
+           <div class=""box box-press-inquiries"">
+               <strong class=""box-title"">
+                   <span>Press Inquiries</span>
+               </strong>
+               <div class=""box-content"">
+                   <p>Please direct all media inquiries via email to: <a href=""mailto:pr@luma.com"">pr@luma.com</a></p>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+"
+"Home Page Block",home-page-block,"<div class=""blocks-promo"">
+   <a href=""{{store url=""""}}collections/best-sellers.html"" class=""block-promo home-main"">
+       <img src=""{{media url=""wysiwyg/home/b2b-home-main.jpg""}}"" alt="""" />
+       <span class=""content bg-white"">
+           <span class=""info"">Work smarter, not harder</span>
+           <strong class=""title"">Innovative products make tough jobs a breeze</strong>
+           <span class=""action more button"">Shop Best Sellers</span>
+       </span>
+   </a>
+   <div class=""block-promo-wrapper block-promo-hp"">
+       <a href=""{{store url=""""}}customer/account/login/"" class=""block-promo home-pants"">
+           <img src=""{{media url=""wysiwyg/home/b2b-home-order.jpg""}}"" alt="""" />
+           <span class=""content"">
+               <strong class=""title"">Order History</strong>
+               <span class=""info"">Access updates to your purchases</span>
+               <span class=""action more icon"">My Account</span>
+           </span>
+       </a>
+       <a href=""{{store url=""""}}lighting.html"" class=""block-promo home-t-shirts"">
+           <span class=""image""><img src=""{{media url=""wysiwyg/home/b2b-home-lighting.png""}}"" alt="""" /></span>
+           <span class=""content"">
+               <strong class=""title"">Lighting solutions for every project</strong>
+               <span class=""info"">Save $$$ with larger quantities</span>
+               <span class=""action more icon"">Shop Lighting</span>
+           </span>
+       </a>
+       <a href=""{{store url=""""}}credit-application.html"" class=""block-promo home-erin"">
+           <img src=""{{media url=""wysiwyg/home/b2b-home-save.jpg""}}"" alt="""" />
+           <span class=""content"">
+               <strong class=""title"">Enjoy more savings</strong>
+               <span class=""info"">Order what you need today. Pay later.</span>
+               <span class=""action more icon"">Start a Credit App</span>
+           </span>
+       </a>
+       <a href=""{{store url=""""}}tools.html"" class=""block-promo home-performance"">
+           <img src=""{{media url=""wysiwyg/home/b2b-home-bitkit.jpg""}}"" alt="""" />
+           <span class=""content bg-white"">
+               <strong class=""title"">Save up to 40%</strong>
+               <span class=""info"">Deep discounts on Milwaukee Bit Kits</span>
+               <span class=""action more icon"">Shop Tools</span>
+           </span>
+       </a>
+       <a href=""{{store url=""""}}power-distribution.html"" class=""block-promo home-eco"">
+           <img src=""{{media url=""wysiwyg/home/b2b-home-power.jpg""}}"" alt="""" />
+           <span class=""content bg-white"">
+               <strong class=""title"">Harness all the power you need</strong>
+               <span class=""info"">Transformers, panelboards, safety switches and surge protection</span>
+               <span class=""action more icon"">Shop Power Distribution</span>
+           </span>
+       </a>
+   </div>
+</div>
+<div class=""content-heading"">
+   <h2 class=""title"">Top Sellers</h2>
+   <p class=""info"">What’s trending on Brentmill right now</p>
+</div>
+{{widget type=""Magento\\CatalogWidget\\Block\\Product\\ProductsList"" products_per_page=""5"" products_count=""5"" template=""product/widget/content/grid.phtml"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:3:`sku`;s:8:`operator`;s:2:`()`;s:5:`value`;s:60:`WS12, WT09, MT07, MH07, 24-MB02, 24-WB04, 241-MB08, 240-LV05`;]]""}}
+"
+"Quick Order",quick-order,"<div class=""nav-promo""><span style=""color: #ffffff;""><em><span style=""text-decoration: underline;""><strong>QUICK ORDER BLOCK</strong></span></em></span></div>
+"
+"Credit Application",credit-app,"<div class=""nav-promo""><span style=""text-decoration: underline; color: #ffffff;""><em><strong>CREDIT APPLICATION</strong></em></span></div>
+"

@@ -15,13 +15,6 @@ class Installer implements Setup\SampleData\InstallerInterface
     private $category;
 
     /**
-     * Setup class for css
-     *
-     * @var \Magento\ThemeSampleData\Model\Css
-     */
-    private $css;
-
-    /**
      * @var \Magento\CmsSampleData\Model\Page
      */
     private $page;
@@ -33,18 +26,15 @@ class Installer implements Setup\SampleData\InstallerInterface
 
     /**
      * @param \Magento\CatalogSampleData\Model\Category $category
-     * @param \Magento\ThemeSampleData\Model\Css $css
      * @param \Magento\CmsSampleData\Model\Page $page
      * @param \Magento\CmsSampleData\Model\Block $block
      */
     public function __construct(
-        \Magento\CatalogSampleData\Model\Category $category,
-        \Magento\ThemeSampleData\Model\Css $css,
+        //\Magento\CatalogSampleData\Model\Category $category,
         \Magento\CmsSampleData\Model\Page $page,
         \Magento\CmsSampleData\Model\Block $block
     ) {
-        $this->category = $category;
-        $this->css = $css;
+        //$this->category = $category;
         $this->page = $page;
         $this->block = $block;
     }
@@ -54,13 +44,10 @@ class Installer implements Setup\SampleData\InstallerInterface
      */
     public function install()
     {
-        $this->category->install(['MagentoEse_B2bCmsSampleData::fixtures/categories.csv']);
-        $this->css->install(['MagentoEse_B2bCmsSampleData::fixtures/styles.css' => 'styles.css']);
+        //$this->category->install(['MagentoEse_B2bCmsSampleData::fixtures/categories.csv']);
         $this->page->install(['MagentoEse_B2bCmsSampleData::fixtures/pages/pages.csv']);
         $this->block->install(
             [
-                'MagentoEse_B2bCmsSampleData::fixtures/blocks/categories_static_blocks.csv',
-                'MagentoEse_B2bCmsSampleData::fixtures/blocks/categories_static_blocks_giftcard.csv',
                 'MagentoEse_B2bCmsSampleData::fixtures/blocks/pages_static_blocks.csv',
             ]
         );
