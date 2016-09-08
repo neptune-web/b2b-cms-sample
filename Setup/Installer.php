@@ -25,14 +25,14 @@ class Installer implements Setup\SampleData\InstallerInterface
     private $block;
 
     /**
-     * @param \Magento\CatalogSampleData\Model\Category $category
-     * @param \Magento\CmsSampleData\Model\Page $page
-     * @param \Magento\CmsSampleData\Model\Block $block
+     * @param \MagentoEse\CatalogSampleData\Model\Category $category
+     * @param \MagentoEse\CmsSampleData\Model\Page $page
+     * @param \MagentoEse\CmsSampleData\Model\Block $block
      */
     public function __construct(
-        //\Magento\CatalogSampleData\Model\Category $category,
-        \Magento\CmsSampleData\Model\Page $page,
-        \Magento\CmsSampleData\Model\Block $block
+        //\MagentoEse\CatalogSampleData\Model\Category $category,
+        \MagentoEse\CmsSampleData\Model\Page $page,
+        \MagentoEse\CmsSampleData\Model\Block $block
     ) {
         //$this->category = $category;
         $this->page = $page;
