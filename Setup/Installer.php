@@ -31,8 +31,8 @@ class Installer implements Setup\SampleData\InstallerInterface
      */
     public function __construct(
         //\MagentoEse\CatalogSampleData\Model\Category $category,
-        \MagentoEse\CmsSampleData\Model\Page $page,
-        \MagentoEse\CmsSampleData\Model\Block $block
+        \MagentoEse\B2bCmsSampleData\Model\Page $page,
+        \MagentoEse\B2bCmsSampleData\Model\Block $block
     ) {
         //$this->category = $category;
         $this->page = $page;
