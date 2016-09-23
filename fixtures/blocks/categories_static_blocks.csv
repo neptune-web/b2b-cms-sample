@@ -53,9 +53,7 @@ title,identifier,content
        <a href=""{{store url=""""}}customer/account/login/"" class=""block-promo home-pants"">
            <img src=""{{media url=""wysiwyg/home/b2b-home-order.jpg""}}"" alt="""" />
            <span class=""content"">
-               <strong class=""title"">Order History</strong>
-               <span class=""info"">Access updates to your purchases</span>
-               <span class=""action more icon"">My Account</span>
+               {{widget type=""MagentoEse\\MyAccountWidget\\Block\\Widget\\MyAccount"" creditbalance=""true"" orders=""true""}} 
            </span>
        </a>
        <a href=""{{store url=""""}}lighting.html"" class=""block-promo home-t-shirts"">
