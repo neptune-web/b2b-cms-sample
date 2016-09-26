@@ -1,8 +1,6 @@
 {
     "name": "magentoese/module-b2b-cms-sample-data",
     "require": {
-        "php": "~5.6.0|7.0.2|~7.0.6",
-        "magento/module-cms": "101.0.*",
         "magentoese/module-b2b-media-sample-data": "*"
     },
     "type": "magento2-module",
