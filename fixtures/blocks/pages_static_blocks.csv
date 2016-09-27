@@ -100,5 +100,5 @@ title,identifier,content
 <div class=""dropdown-content"">{{widget type=""Magento\AdvancedCheckout\Block\Widget\Sku"" template=""widget/sku.phtml"" unique_id=""ae3ded817baee7d5503759837288b5ab"" link_display=""0"" link_text=""Load a list of SKUs""}}</div>
 </div>
 "
-"Additional Links",credit-app,"<div class=""navigation level0 level-top""><a href=""{{store url=""""}}sales/guest/form/""><span>Orders and Returns</span></a></div>
+"Additional Links",credit-app,"<div class=""level0 nav-1 first level-top ui-menu-item""><a href=""{{store url=""""}}sales/guest/form/"" class=""level-top ui-corner-all""><span>Orders and Returns</span></a></div>
 "
