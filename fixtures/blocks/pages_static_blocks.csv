@@ -94,7 +94,7 @@ title,identifier,content
    <h2 class=""title"">Top Sellers</h2>
    <p class=""info"">What’s trending on Brentmill right now</p>
 </div>
-{{widget type=""Magento\\CatalogWidget\\Block\\Product\\ProductsList"" products_per_page=""5"" products_count=""5"" template=""product/widget/content/grid.phtml"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:3:`sku`;s:8:`operator`;s:2:`()`;s:5:`value`;s:60:`WS12, WT09, MT07, MH07, 24-MB02, 24-WB04, 241-MB08, 240-LV05`;]]""}}
+{{widget type=""Magento\\CatalogWidget\\Block\\Product\\ProductsList"" show_pager=""0"" products_count=""5"" template=""product/widget/content/grid.phtml"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:1:`4`;]]""}}</p>
 "
 "Quick Order",quick-order,"<div class=""dropdown"" style=""float: right;""><button class=""dropbtn"">Quick Order</button>
 <div class=""dropdown-content"">{{widget type=""Magento\AdvancedCheckout\Block\Widget\Sku"" template=""widget/sku.phtml"" unique_id=""ae3ded817baee7d5503759837288b5ab"" link_display=""0"" link_text=""Load a list of SKUs""}}</div>
