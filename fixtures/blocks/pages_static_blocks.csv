@@ -54,7 +54,7 @@ title,identifier,content
            <img src=""{{media url=""wysiwyg/home/b2b-home-order.jpg""}}"" alt="""" />
            <span class=""content bg-white"">
           <strong class="title">My Account</strong>
-               {{widget type=""MagentoEse\\MyAccountWidget\\Block\\Widget\\MyAccount"" creditbalance=""true"" orders=""true""}}
+               {{widget type=""MagentoEse\\MyAccountWidget\\Block\\Widget\\MyAccount"" creditbalance=""$249,238"" orders=""true""}}
            </span>
        </a>
        <a href=""{{store url=""""}}products/lighting/led-lamps.html"" class=""block-promo home-t-shirts"">
