@@ -55,6 +55,7 @@ title,identifier,content
            <span class=""content bg-white"">
           <strong class=""title"">My Account</strong>
                {{widget type=""MagentoEse\\MyAccountWidget\\Block\\Widget\\MyAccount"" creditbalance=""249238"" orders=""true""}}
+               <span class=""action more icon"">My Account</span>
            </span>
        </a>
        <a href=""{{store url=""""}}products/lighting/led-lamps.html"" class=""block-promo home-t-shirts"">
