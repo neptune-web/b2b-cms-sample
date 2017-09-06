@@ -1,0 +1,117 @@
+title,identifier,content
+"Home Page B2C",home-page-b2c,"<div class=""blocks-promo"">
+   <a href=""{{store url=""""}}best-sellers.html"" class=""block-promo home-main"">
+       <img src=""{{media url=""wysiwyg/home/b2b-home-main-b2c.jpg""}}"" alt="""" />
+       <span class=""content bg-white"">
+           <span class=""info"">Tools from brands you love</span>
+           <strong class=""title"">Get organized in your workshop</strong>
+           <span class=""action more button"">Shop Best Sellers</span>
+       </span>
+   </a>
+   <div class=""block-promo-wrapper block-promo-hp"">
+       <a href=""{{store url=""""}}customer/account/login/"" class=""block-promo home-pants"">
+           <img src=""{{media url=""wysiwyg/home/b2b-home-order-b2c.jpg""}}"" alt="""" />
+           <span class=""content bg-white"">
+          <strong class=""title"">Dig into<br> Savings</strong>
+               <br>
+               <span class=""action more icon"">View Promotions</span>
+           </span>
+       </a>
+       <a href=""{{store url=""""}}products/lighting/led-lamps.html"" class=""block-promo home-t-shirts"">
+           <span class=""image""><img src=""{{media url=""wysiwyg/home/b2b-home-lighting-b2c.jpg""}}"" alt="""" /></span>
+           <span class=""content"">
+               <strong class=""title"">Lighting solutions for every project</strong>
+               <span class=""info"">Keep out of the dark with new lights</span>
+               <span class=""action more icon"">Shop Lighting</span>
+           </span>
+       </a>
+       <a href=""{{store url=""""}}#"" class=""block-promo home-erin"">
+           <img src=""{{media url=""wysiwyg/home/b2b-home-save-b2c.jpg""}}"" alt="""" />
+           <span class=""content"">
+               <strong class=""title"">Latest Tools</strong>
+               <span class=""info"">Explore our newest products.</span>
+               <span class=""action more icon"">New Products</span>
+           </span>
+       </a>
+       <a href=""{{store url=""""}}bit-sale.html"" class=""block-promo home-performance"">
+           <img src=""{{media url=""wysiwyg/home/b2b-home-bitkit-b2c.jpg""}}"" alt="""" />
+           <span class=""content bg-white"">
+               <strong class=""title"">Save up to 20%</strong>
+               <span class=""info"">Deep discounts on Milwaukee Bit Kits</span>
+               <span class=""action more icon"">Shop Tools</span>
+           </span>
+       </a>
+       <a href=""{{store url=""""}}products/power-distribution.html"" class=""block-promo home-eco"">
+           <img src=""{{media url=""wysiwyg/home/b2b-home-power-b2c.jpg""}}"" alt="""" />
+           <span class=""content bg-white"">
+               <strong class=""title"">Harness all the power you need</strong>
+               <span class=""info"">Transformers, panelboards, safety switches and surge protection</span>
+               <span class=""action more icon"">Shop Power Distribution</span>
+           </span>
+       </a>
+   </div>
+</div>
+<div class=""content-heading"">
+   <h2 class=""title"">Top Sellers</h2>
+   <p class=""info"">What’s trending on Brentmill right now</p>
+</div>
+<p>{{widget type=""Magento\CatalogWidget\Block\Product\ProductsList"" show_pager=""0"" products_count=""5"" template=""product/widget/content/grid.phtml"" conditions_encoded=""^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`4`^]^]""}}</p>
+"
+"Home Page Not Logged In",home-page-nolog,"<div class=""blocks-promo"">
+   <a href=""{{store url=""""}}best-sellers.html"" class=""block-promo home-main"">
+       <img src=""{{media url=""wysiwyg/home/b2b-home-main-b2c.jpg""}}"" alt="""" />
+       <span class=""content bg-white"">
+           <span class=""info"">Tools from brands you love</span>
+           <strong class=""title"">Get organized in your workshop</strong>
+           <span class=""action more button"">Shop Best Sellers</span>
+       </span>
+   </a>
+   <div class=""block-promo-wrapper block-promo-hp"">
+       <a href=""{{store url=""""}}customer/account/login/"" class=""block-promo home-pants"">
+           <img src=""{{media url=""wysiwyg/home/b2b-home-order-b2c.jpg""}}"" alt="""" />
+           <span class=""content bg-white"">
+          <strong class=""title"">Dig into<br> Savings</strong>
+               <br>
+               <span class=""action more icon"">View Promotions</span>
+           </span>
+       </a>
+       <a href=""{{store url=""""}}products/lighting/led-lamps.html"" class=""block-promo home-t-shirts"">
+           <span class=""image""><img src=""{{media url=""wysiwyg/home/b2b-home-lighting-b2c.jpg""}}"" alt="""" /></span>
+           <span class=""content"">
+               <strong class=""title"">Lighting solutions for every project</strong>
+               <span class=""info"">Keep out of the dark with new lights</span>
+               <span class=""action more icon"">Shop Lighting</span>
+           </span>
+       </a>
+       <a href=""{{store url=""""}}#"" class=""block-promo home-erin"">
+           <img src=""{{media url=""wysiwyg/home/b2b-home-save-b2c.jpg""}}"" alt="""" />
+           <span class=""content"">
+               <strong class=""title"">Latest Tools</strong>
+               <span class=""info"">Explore our newest products.</span>
+               <span class=""action more icon"">New Products</span>
+           </span>
+       </a>
+       <a href=""{{store url=""""}}bit-sale.html"" class=""block-promo home-performance"">
+           <img src=""{{media url=""wysiwyg/home/b2b-home-bitkit-b2c.jpg""}}"" alt="""" />
+           <span class=""content bg-white"">
+               <strong class=""title"">Save up to 20%</strong>
+               <span class=""info"">Deep discounts on Milwaukee Bit Kits</span>
+               <span class=""action more icon"">Shop Tools</span>
+           </span>
+       </a>
+       <a href=""{{store url=""""}}products/power-distribution.html"" class=""block-promo home-eco"">
+           <img src=""{{media url=""wysiwyg/home/b2b-home-power-b2c.jpg""}}"" alt="""" />
+           <span class=""content bg-white"">
+               <strong class=""title"">Harness all the power you need</strong>
+               <span class=""info"">Transformers, panelboards, safety switches and surge protection</span>
+               <span class=""action more icon"">Shop Power Distribution</span>
+           </span>
+       </a>
+   </div>
+</div>
+<div class=""content-heading"">
+   <h2 class=""title"">Top Sellers</h2>
+   <p class=""info"">What’s trending on Brentmill right now</p>
+</div>
+<p>{{widget type=""Magento\CatalogWidget\Block\Product\ProductsList"" show_pager=""0"" products_count=""5"" template=""product/widget/content/grid.phtml"" conditions_encoded=""^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`4`^]^]""}}</p>
+"
