@@ -15,15 +15,29 @@ class UpgradeData implements UpgradeDataInterface
     private $segment;
 
     /**
+     * App State
+     *
+     * @var \Magento\Framework\App\State
+     */
+    protected $state;
+
+    /**
      * @param \MagentoEse\CmsSampleData\Model\Block $block
      * @param \MagentoEse\CmsSampleData\Model\Segment $segment
      */
     public function __construct(
+        \Magento\Framework\App\State $state,
         \MagentoEse\B2bCmsSampleData\Model\Block $block,
         \MagentoEse\B2bCmsSampleData\Model\Segment $segment
     ) {
         $this->block = $block;
         $this->segment = $segment;
+        try{
+            $state->setAreaCode('adminhtml');
+        }
+        catch(\Magento\Framework\Exception\LocalizedException $e){
+            // left empty
+        }
     }
 
     public function upgrade(ModuleDataSetupInterface $setup, ModuleContextInterface $context)

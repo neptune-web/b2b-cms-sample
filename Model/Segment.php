@@ -33,12 +33,12 @@ class Segment
      */
     public function __construct(
         SampleDataContext $sampleDataContext,
-        \Magento\CustomerSegment\Model\Segment $segment,
+        \Magento\CustomerSegment\Model\Segment $segment
     ) {
         $this->fixtureManager = $sampleDataContext->getFixtureManager();
         $this->csvReader = $sampleDataContext->getCsvReader();
-        $this->segment = $segment
-    }
+        $this->segment = $segment;
+      }
 
     /**
      * {@inheritdoc}
