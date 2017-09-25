@@ -33,7 +33,7 @@ class Segment
      */
     public function __construct(
         SampleDataContext $sampleDataContext,
-        \Magento\CustomerSegment\Model\Segment $segment
+        \Magento\CustomerSegment\Model\SegmentFactory $segment
     ) {
         $this->fixtureManager = $sampleDataContext->getFixtureManager();
         $this->csvReader = $sampleDataContext->getCsvReader();
@@ -61,11 +61,12 @@ class Segment
                 }
                 $row = $data;
 
-                $row['name'] = $this->segment->getName();
-                $row['conditions'] = $this->segment->getConditionsSerialized();
-                $row['sql'] = $this->segment->getConditionSql();
                 $segment = $this->segment->create();
-                $segment->loadPost($row);
+                $segment->setName($row['name']);
+                $segment->setConditionsSerialized($row['conditions']);
+                $segment->setConditionSql($row['sql']);
+                $segment->setIsActive(1);
+                $segment->addData(['apply_to'=>$data['apply_to']]);
                 $segment->save();
             }
         }

@@ -22,8 +22,8 @@ class UpgradeData implements UpgradeDataInterface
     protected $state;
 
     /**
-     * @param \MagentoEse\CmsSampleData\Model\Block $block
-     * @param \MagentoEse\CmsSampleData\Model\Segment $segment
+     * @param \MagentoEse\B2bCmsSampleData\Model\Block $block
+     * @param \MagentoEse\B2bCmsSampleData\Model\Segment $segment
      */
     public function __construct(
         \Magento\Framework\App\State $state,
