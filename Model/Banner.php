@@ -65,8 +65,7 @@ class Banner
                 $banner->setName($row['name']);
                 $banner->setIsEnabled(1);
                 $banner->setTypes('content');
-                $banner->addData(['store_id'=>$data['store_id']]);
-                $banner->addData(['banner_content'=>$data['banner_content']]);
+                $banner->setStoreContents(array($row['store_id'],$row['banner_content']));
                 $banner->save();
             }
         }
