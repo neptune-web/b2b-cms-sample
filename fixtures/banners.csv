@@ -1,4 +1,4 @@
-name,content
-Not Logged In,{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="8"}}
-B2C User,{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="7"}}
-B2B User,{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="4"}}
+name,store_id,banner_content
+Not Logged In,0,"{{widget type=""Magento\Cms\Block\Widget\Block"" template=""widget/static_block/default.phtml"" block_id=""8""}}"
+B2C User,0,"{{widget type=""Magento\Cms\Block\Widget\Block"" template=""widget/static_block/default.phtml"" block_id=""7""}}"
+B2B User,0,"{{widget type=""Magento\Cms\Block\Widget\Block"" template=""widget/static_block/default.phtml"" block_id=""4""}}"

@@ -13,6 +13,7 @@ class UpgradeData implements UpgradeDataInterface
 {
     private $block;
     private $segment;
+    private $banner;
 
     /**
      * App State
@@ -28,10 +29,13 @@ class UpgradeData implements UpgradeDataInterface
     public function __construct(
         \Magento\Framework\App\State $state,
         \MagentoEse\B2bCmsSampleData\Model\Block $block,
-        \MagentoEse\B2bCmsSampleData\Model\Segment $segment
+        \MagentoEse\B2bCmsSampleData\Model\Segment $segment,
+        \MagentoEse\B2bCmsSampleData\Model\Banner $banner
+
     ) {
         $this->block = $block;
         $this->segment = $segment;
+        $this->banner = $banner;
         try{
             $state->setAreaCode('adminhtml');
         }
@@ -50,6 +54,7 @@ class UpgradeData implements UpgradeDataInterface
         if (version_compare($context->getVersion(), '0.0.3') < 0
         ) {
           $this->segment->install(['MagentoEse_B2bCmsSampleData::fixtures/segments.csv']);
+          $this->banner->install(['MagentoEse_B2bCmsSampleData::fixtures/banners.csv']);
         }
         $setup->endSetup();
     }
