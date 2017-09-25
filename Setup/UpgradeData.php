@@ -30,12 +30,14 @@ class UpgradeData implements UpgradeDataInterface
         \Magento\Framework\App\State $state,
         \MagentoEse\B2bCmsSampleData\Model\Block $block,
         \MagentoEse\B2bCmsSampleData\Model\Segment $segment,
-        \MagentoEse\B2bCmsSampleData\Model\Banner $banner
+        \MagentoEse\B2bCmsSampleData\Model\Banner $banner,
+        \Magento\Cms\Model\PageFactory $pageFactory
 
     ) {
         $this->block = $block;
         $this->segment = $segment;
         $this->banner = $banner;
+        $this->pageFactory = $pageFactory;
         try{
             $state->setAreaCode('adminhtml');
         }
@@ -49,12 +51,22 @@ class UpgradeData implements UpgradeDataInterface
         $setup->startSetup();
         if (version_compare($context->getVersion(), '0.0.2') < 0
         ) {
+          //add new homepage blocks
           $this->block->install(['MagentoEse_B2bCmsSampleData::fixtures/blocks/b2c_nonlog_home_blocks.csv']);
         }
         if (version_compare($context->getVersion(), '0.0.3') < 0
         ) {
+          //add segments
           $this->segment->install(['MagentoEse_B2bCmsSampleData::fixtures/segments.csv']);
+
+          //add banners
           $this->banner->install(['MagentoEse_B2bCmsSampleData::fixtures/banners.csv']);
+
+          //update homepage with banners
+          $this->pageFactory->create()
+              ->load('home')
+              ->setContent('<p>{{widget type="Magento\Banner\Block\Widget\Banner" display_mode="fixed" types="content" rotate="" banner_ids="1,2,3" template="widget/block.phtml" unique_id="f58b68666f48bd5966fe77080ddaecde"}}</p>')
+              ->save();
         }
         $setup->endSetup();
     }
