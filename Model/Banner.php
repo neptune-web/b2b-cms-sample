@@ -28,16 +28,24 @@ class Banner
     protected $banner;
 
     /**
+     * @var \Magento\BannerCustomerSegment\Model\ResourceMode\BannerSegmentLink
+     */
+    private $bannerSegmentLink;
+
+    /**
      * @param SampleDataContext $sampleDataContext
      * @param Banner $banner
+     * @param BannerSegmentLink $bannerSegmentLink
      */
     public function __construct(
         SampleDataContext $sampleDataContext,
-        \Magento\Banner\Model\BannerFactory $banner
+        \Magento\Banner\Model\BannerFactory $banner,
+        \Magento\BannerCustomerSegment\Model\ResourceModel\BannerSegmentLink $bannerSegmentLink
     ) {
         $this->fixtureManager = $sampleDataContext->getFixtureManager();
         $this->csvReader = $sampleDataContext->getCsvReader();
         $this->banner = $banner;
+        $this->bannerSegmentLink = $bannerSegmentLink;
       }
 
     /**
@@ -69,5 +77,9 @@ class Banner
                 $banner->save();
             }
         }
+        //assign segments to banners
+        $this->bannerSegmentLink->saveBannerSegments(1,[1]);
+        $this->bannerSegmentLink->saveBannerSegments(2,[2]);
+        $this->bannerSegmentLink->saveBannerSegments(3,[3]);
     }
 }
