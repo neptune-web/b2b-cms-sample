@@ -70,5 +70,13 @@ class Segment
                 $segment->save();
             }
         }
+        //add website to segment
+        $this->_resources = \Magento\Framework\App\ObjectManager::getInstance()
+        ->get('Magento\Framework\App\ResourceConnection');
+        $connection= $this->_resources->getConnection();
+
+        $customerSegmentWebsiteTable = $this->_resources->getTableName('magento_customersegment_website');
+        $sql = "INSERT INTO " . $customerSegmentWebsiteTable . "(segment_id, website_id) VALUES ('1', '1'), ('2', '1'), ('3','1')";
+        $connection->query($sql);
     }
 }
