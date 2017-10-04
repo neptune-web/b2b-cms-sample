@@ -96,7 +96,6 @@ title,identifier,content
    <h2 class=""title"">Top Sellers</h2>
    <p class=""info"">What’s trending on Brentmill right now</p>
 </div>
-<p>{{widget type=""Magento\CatalogWidget\Block\Product\ProductsList"" show_pager=""0"" products_count=""5"" template=""product/widget/content/grid.phtml"" conditions_encoded=""^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`4`^]^]""}}</p>
 "
 "Quick Order",quick-order,"<div class=""dropdown"" style=""float: right;""><button class=""dropbtn"">Quick Order</button>
 <div class=""dropdown-content"">{{widget type=""Magento\AdvancedCheckout\Block\Widget\Sku"" template=""widget/sku.phtml"" unique_id=""ae3ded817baee7d5503759837288b5ab"" link_display=""0"" link_text=""Load a list of SKUs""}}</div>

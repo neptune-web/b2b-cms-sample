@@ -65,7 +65,7 @@ class UpgradeData implements UpgradeDataInterface
           //update homepage with banners
           $this->pageFactory->create()
               ->load('home')
-              ->setContent('<p>{{widget type="Magento\Banner\Block\Widget\Banner" display_mode="fixed" types="content" rotate="" banner_ids="1,2,3" template="widget/block.phtml" unique_id="f58b68666f48bd5966fe77080ddaecde"}}</p>')
+              ->setContent('<p>{{widget type="Magento\Banner\Block\Widget\Banner" display_mode="fixed" types="content" rotate="" banner_ids="1,2,3" template="widget/block.phtml" unique_id="f58b68666f48bd5966fe77080ddaecde"}}</p><p>{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="5" template="product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`4`^]^]"}}</p>')
               ->save();
         }
         $setup->endSetup();
