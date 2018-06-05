@@ -9,32 +9,25 @@ use Magento\Framework\Setup;
 
 class Installer implements Setup\SampleData\InstallerInterface
 {
-    /**
-     * @var \Magento\CatalogSampleData\Model\Category
-     */
-    private $category;
 
     /**
-     * @var \Magento\CmsSampleData\Model\Page
+     * @var \MagentoEse\B2bCmsSampleData\Model\Page
      */
     private $page;
 
     /**
-     * @var \Magento\CmsSampleData\Model\Block
+     * @var \MagentoEse\B2bCmsSampleData\Model\Block
      */
     private $block;
 
     /**
-     * @param \MagentoEse\CatalogSampleData\Model\Category $category
-     * @param \MagentoEse\CmsSampleData\Model\Page $page
-     * @param \MagentoEse\CmsSampleData\Model\Block $block
+     * @param \MagentoEse\B2bCmsSampleData\Model\Page $page
+     * @param \MagentoEse\B2bCmsSampleData\Model\Block $block
      */
     public function __construct(
-        //\MagentoEse\CatalogSampleData\Model\Category $category,
         \MagentoEse\B2bCmsSampleData\Model\Page $page,
         \MagentoEse\B2bCmsSampleData\Model\Block $block
     ) {
-        //$this->category = $category;
         $this->page = $page;
         $this->block = $block;
     }
@@ -44,7 +37,6 @@ class Installer implements Setup\SampleData\InstallerInterface
      */
     public function install()
     {
-        //$this->category->install(['MagentoEse_B2bCmsSampleData::fixtures/categories.csv']);
         $this->page->install(['MagentoEse_B2bCmsSampleData::fixtures/pages/pages.csv']);
         $this->block->install(
             [
