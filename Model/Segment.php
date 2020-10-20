@@ -5,39 +5,64 @@
  */
 namespace MagentoEse\B2bCmsSampleData\Model;
 
+use Magento\CustomerSegment\Model\SegmentFactory;
+use Magento\Framework\File\Csv;
 use Magento\Framework\Setup\SampleData\Context as SampleDataContext;
+use Magento\Framework\Setup\SampleData\FixtureManager;
+use MagentoEse\DataInstall\Model\Converter;
+use Magento\CustomerSegment\Model\ResourceModel\Segment as ResourceModel;
+use Magento\CustomerSegment\Model\ResourceModel\Segment\CollectionFactory as SegmentCollection;
 
 /**
  * Class Segment
  */
 class Segment
 {
+    /** @var Converter */
+    protected $converter;
+
     /**
-     * @var \Magento\Framework\File\Csv
+     * @var Csv
      */
     protected $csvReader;
 
     /**
-     * @var \Magento\Framework\Setup\SampleData\FixtureManager
+     * @var FixtureManager
      */
     protected $fixtureManager;
 
     /**
-     * @var \Magento\CustomerSegment\Model\Segment
+     * @var SegmentFactory
      */
     protected $segment;
 
+    /** @var ResourceModel */
+    protected $resourceModel;
+
+    /** @var SegmentCollection */
+    protected $segmentCollection;
+
     /**
+     * Segment constructor.
      * @param SampleDataContext $sampleDataContext
-     * @param Segment $segment
+     * @param SegmentFactory $segment
+     * @param Converter $converter
+     * @param ResourceModel $resourceModel
+     * @param SegmentCollection $segmentCollection
      */
     public function __construct(
         SampleDataContext $sampleDataContext,
-        \Magento\CustomerSegment\Model\SegmentFactory $segment
+        SegmentFactory $segment,
+        Converter $converter,
+        ResourceModel $resourceModel,
+        SegmentCollection $segmentCollection
     ) {
         $this->fixtureManager = $sampleDataContext->getFixtureManager();
         $this->csvReader = $sampleDataContext->getCsvReader();
         $this->segment = $segment;
+        $this->converter = $converter;
+        $this->resourceModel = $resourceModel;
+        $this->segmentCollection = $segmentCollection;
     }
 
     /**
@@ -62,13 +87,21 @@ class Segment
                 $row = $data;
 
                 $segment = $this->segment->create();
+
+                $existingSegment = $this->segmentCollection->create()->
+                addFieldToSelect('name')->addFieldToSelect('segment_id')
+                ->addFieldToFilter('name',array('eq' => $row['name']))->getFirstItem();
+                if($existingSegment){
+                    $segment->load($existingSegment->getId());
+                }
                 $segment->addData(['website_ids'=>[1]]);
                 $segment->setName($row['name']);
-                $segment->setConditionsSerialized($row['conditions']);
-                $segment->setConditionSql($row['sql']);
+                $segment->setConditionsSerialized($this->converter->convertContent($row['conditions']));
+                $cond = $this->converter->convertContent($row['conditions']);
+                $segment->setConditionSql($this->converter->convertContent($row['sql']));
                 $segment->setIsActive(1);
                 $segment->addData(['apply_to'=>$data['apply_to']]);
-                $segment->save();
+                $this->resourceModel->save($segment);
             }
         }
 
